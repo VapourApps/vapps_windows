@@ -1,0 +1,44 @@
+.container {
+    margin-top: 20px;
+}
+
+#home-page {
+  cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#home-screen p span:first-child {
+    display: inline-block;
+    width: 200px;
+}
+
+#signBtn {
+    margin: 10px 0px;
+}
+
+.combo {
+    margin: 10px 0px;
+}
+
+.dot {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+  display: inline-block;
+  background-color: red;
+  margin-right: 30px;
+}
+
+#backup-result{
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

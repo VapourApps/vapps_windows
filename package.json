@@ -1,0 +1,37 @@
+{
+  "name": "vapour-apps",
+  "productName": "VapourApps app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "package-win": "electron-packager . vapour-apps --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"VapourApps app\""
+  },
+  "author": "Stanka Naceva",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
+    "electron-builder-squirrel-windows": "^20.8.0",
+    "electron-packager": "^12.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "electron-json-storage": "^4.0.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "request": "^2.85.0"
+  },
+  "build": {
+    "appId": "com.vapour-apps",
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.png"
+    }
+  }
+}

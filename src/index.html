@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/style.css">
+      <title>VapourApps</title>
+    </head>
+    <body class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand" id="home-page">VapourApps Desktop</span>
+      </nav>
+        <div id='login-screen' class='hidden'>
+            <form>
+              <div class="form-group">
+                  <label>URL</label>
+                  <input type='text' class="form-control" id='url' />
+              </div>
+              <div class="form-group">
+                  <label>Username</label>
+                  <input type='text' class="form-control" id='username' />
+              </div>
+              <div class="form-group">
+                  <label>Password</label>
+                  <input type='password' class="form-control" id='password' />
+              </div>
+              <button id='submitBtn' type='button' class="btn btn-primary">Submit</button>
+            </form>
+            <div class="alert alert-danger hidden" role="alert" id='response'></div>
+        </div>
+        <div id='home-screen'>
+            <p>
+                <span>VapourApps Connector</span>
+                <span class="dot" id='login-dot'></span>
+                <button class='btn btn-default' id='signBtn'>Login</button>
+                <div id='master-result'></div>
+            </p>
+            <div id='buttons'>
+              <p>
+                  <span>BACKUP service</span>
+                  <span class="dot" id='backup-dot'></span>
+                  <button id='backupBtn' class='btn btn-default' disabled>Options</button>
+                  <button id='restoreBtn' class='btn btn-default' disabled>Restore</button>
+                  <div id='backup-result'></div>
+              </p>
+              <p>
+                  <span>MONITORING service</span>
+                  <span class="dot"></span>
+                  <button id='monitoringBtn' class='btn btn-default' disabled>Options</button>
+                  <div id='monitoring-result'></div>
+              </p>
+              <p>
+                  <span>VPN connection</span>
+                  <span class="dot"></span>
+                  <button id='vpnBtn' class='btn btn-default' disabled>Options</button>
+                  <div id='vpn-result'></div>
+              </p>
+          </div>
+        </div>
+        <div id='backup-screen' class='hidden'>
+            <table id='backupFiles' class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Path</th>
+                        <th scope="col">Bucket name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="combo">
+                <input type='file' id='backupFilesInput' webkitdirectory />
+                <button id='addBtn' type='button' class="btn btn-primary">Add</button>
+                <button id='saveBtn' type='button' class="btn btn-primary">Save</button>
+                <button id='restoreBtn' type='button' class="btn btn-primary" style="display:none;">Restore</button>
+            </div>
+            <div class="alert hidden" role="alert" id='responseBackup'></div>
+        </div>
+        <div id='restore-screen' class='hidden'>
+            <table id='restoreTbl' class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Bucket</th>
+                        <th scope="col">Restore location</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="alert hidden" role="alert" id='responseRestore'></div>
+        </div>
+        <!-- <footer>Powered by VapourApps</footer> -->
+      <script src='./js/script.js'></script>
+    </body>
+  </html>

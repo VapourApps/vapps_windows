@@ -19,7 +19,6 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-;DefaultDirName={pf}\EVO
 DefaultDirName=c:\VapourApps
 DisableProgramGroupPage=yes
 OutputDir=c:\VapourApps\installer
@@ -41,8 +40,7 @@ Source: "C:\VapourApps\start_sync.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\VapourApps\stop_sync.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\VapourApps\sync.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\VapourApps\electron\release-builds\vapour-apps-win32-ia32\*"; DestDir: "{app}\connector"; Flags: ignoreversion recursesubdirs
-
-;Source: "\\i3\s$\Docs\OwnCloud\Clients\CenturyLink\client\evo\wfreerdp3.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\VapourApps\monitoring\*"; DestDir: "{app}\monitoring"; Flags: ignoreversion recursesubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
